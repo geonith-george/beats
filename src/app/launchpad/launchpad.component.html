@@ -1,11 +1,26 @@
-    <div class="grid-container">
-        <div class="grid-item item1">Snare
+<script>
+    window.addEventListener("load", () => {
+    const sounds = document.querySelectorAll(".sound");
+    const pads = document.querySelectorAll(".pads div");
+    const visual = document.querySelector(".visual");
+    const colors = [
+        "#60D394", "#D36060", "#C060D3", "#D3D160", "#6860D3", "#60B2D3"
+    ]
+
+    //enabling sound
+   pads.forEach((pad, i) => {
+       pad.addEventListener("click", () => {
+           sounds[i].currentTime = 0;
+           sounds[i].play();
+       });
+   }); 
+</script>
+
+<div class="grid-container">
+        <div class="grid-item item1" (click)="clicked()">Snare
             <div class="pad1">
-                <audio class="sound" src="../sounds/bubbles.mp3"></audio>
+                <audio class="sound" src="sounds/bubbles.mp3"></audio>
             </div>
-            <button (click)="playKick()"> 
-                snare
-            </button>
         </div>
 
         <div class="grid-item item2">Open Hihat
@@ -35,3 +50,4 @@
             </div> 
         </div>
     </div>
+

@@ -7,16 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaunchpadComponent implements OnInit {
   
-  bubble = new Audio('../sounds/bubbles.mp3');
-
   constructor() {  
-   }
-
-   playKick() {
-        this.bubble.play();
+   
   }
- 
-
+  
+  clicked(){
+    console.log("clicked");
+  }
   ngOnInit() {
   }
 
