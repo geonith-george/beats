@@ -13,7 +13,8 @@ export class LaunchpadComponent implements OnInit {
   
   clicked(val:string){
     console.log("clicked");
-    var v = document.getElementById(val);
+    let v = (<HTMLMediaElement>document.getElementById(val));
+    console.log(v,typeof(v));
     v.currentTime = 0;
     v.play();
   }
