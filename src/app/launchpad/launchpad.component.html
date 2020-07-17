@@ -1,35 +1,37 @@
 <div class="grid-container">
-        <div class="grid-item item1" (click)="clicked()">Snare
+        <div class="grid-item item1" (click)="clicked('v1')">Bubbles
             <div class="pad1">
-                <audio class="sound" src="./sounds/bubbles.mp3"></audio>
+                <audio id="v1" class="sound" src="../../assets/bubbles.mp3"></audio>
             </div>
         </div>
 
-        <div class="grid-item item2">Open Hihat
+        <div class="grid-item item2" (click)="clicked('v2')">Clay
             <div class="pad2">
-                <audio class="sound" src="./sounds/clay.mp3"></audio>
+                <audio id="v2" class="sound" src="../../assets/clay.mp3"></audio>
             </div> 
         
         </div>
-        <div class="grid-item item3">Closed Hihat
+        <div class="grid-item item3" (click)="clicked('v3')">Confetti
             <div class="pad3">
-                <audio class="sound" src="./sounds/confetti.mp3"></audio>
+                <audio id="v3" class="sound" src="../../assets/confetti.mp3"></audio>
             </div> 
         </div>  
-        <div class="grid-item item4">Kick
+        <div class="grid-item item4" (click)="clicked('v4')" >Glimmer
             <div class="pad4">
-                <audio class="sound" src="./sounds/glimmer.mp3"></audio>
+                <audio id="v4" class="sound" src="../../assets/glimmer.mp3"></audio>
             </div> 
         </div>
-        <div class="grid-item item5">Tom
+        <div class="grid-item item5" (click)="clicked('v5')">Moon
             <div class="pad5">
-                <audio class="sound" src="./sounds/moon.mp3"></audio>
+                <audio id="v5" class="sound" src="../../assets/moon.mp3"></audio>
             </div> 
         </div>
-        <div class="grid-item item6">Clap
+        <div class="grid-item item6" (click)="clicked('v6')">Ufo
             <div class="pad6">
-                <audio class="sound" src="./sounds/ufo.mp3"></audio>
+                <audio id="v6" class="sound" src="../../assets/ufo.mp3"></audio>
             </div> 
         </div>
     </div>
+
+    
 

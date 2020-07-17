@@ -27,6 +27,10 @@ div{
 }
 
 .grid-container {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
     width: 98%;
     display: grid;
     grid-gap: 10px;
@@ -38,6 +42,11 @@ div{
     text-align: center;
     padding: 20px;
     font-size: 30px;
+    cursor: pointer;
+  }
+
+  .grid-container :active{
+    opacity: 50%;
   }
 
   .item1 {
@@ -80,7 +89,7 @@ div{
   
 @media only screen and (max-width: 600px) {
     .grid-container {
-        width: 93%;
+        width: 94%;
         display: grid;
         grid-gap: 10px;
         border: 2px solid black;
