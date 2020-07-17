@@ -8,6 +8,7 @@ import { PlayerComponent } from './player/player.component';
 import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { LaunchpadComponent } from './launchpad/launchpad.component';
+import { RandomBeatComponent } from './random-beat/random-beat.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LaunchpadComponent } from './launchpad/launchpad.component';
     PlayerComponent,
     NavComponent,
     AboutComponent,
-    LaunchpadComponent
+    LaunchpadComponent,
+    RandomBeatComponent
   ],
   imports: [
     BrowserModule,
