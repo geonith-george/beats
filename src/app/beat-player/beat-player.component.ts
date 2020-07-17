@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { trimTrailingNulls } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-beat-player',
@@ -13,7 +14,8 @@ export class BeatPlayerComponent implements OnInit {
   clap: number[] =  [1,0,1,1];
   kick: number[] =  [1,0,0,0];
   hitat: number[] = [1,1,0,1];
-  speed = 150;
+  cur: string[] = ['-','-','-','-'];
+  speed = 357;
   loop:boolean = false;
 
   constructor() { 
@@ -62,6 +64,7 @@ export class BeatPlayerComponent implements OnInit {
   }
 
 stop(){
+  this.loop= false;
   throw new Error("Something went badly wrong!");
 }
 
@@ -83,14 +86,15 @@ stop(){
    let k = (<HTMLMediaElement>document.getElementById('kick'));
    let h = (<HTMLMediaElement>document.getElementById('hihat'));
    
-
    for(let i=0;i<4;i++){
+    this.cur[i]='+';
      await this.delay(this.speed);
-      if (this.snare[i] ==1){
+      if (this.snare[i] ==1){ 
         s.currentTime=0;
         s.play();
       }
       if (this.clap[i] ==1){
+
         c.currentTime=0;
         c.play();
       }
@@ -101,7 +105,8 @@ stop(){
       if (this.hitat[i] ==1){
         h.currentTime=0;
         h.play();
-      }    
+      } 
+      this.cur[i]='-';
     }
     
     if (this.loop == true){
