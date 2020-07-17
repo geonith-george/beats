@@ -8,4 +8,53 @@ h1 {
   left: 70px;
   border: 3px solid black;
   padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#player2 {
+  left: 150px;
+}
+
+table {
+  position: absolute;
+  top: 180px;
+  left: 10px;
+}
+
+td{
+  width: 80px;
+  border: solid black 2px;
+}
+
+#speed{
+  position: absolute;
+  top: 150px;
+  left: 10px;
+}
+
+button {
+  position: absolute;
+  top: 150px;
+  left: 210px;
+  border: solid black 2px;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  
+}
+
+button:focus {outline:none;}
+
+input{
+  font-family: 'Bebas Neue', cursive;
+    border: solid black 2px;
+    padding: 2px;
+}
+
+input:focus {outline:none;}
+
+td{
+  font-family: 'Bebas Neue', cursive;
+  padding: 2px;
 }
