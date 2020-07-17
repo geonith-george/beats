@@ -15,7 +15,7 @@ export class BeatPlayerComponent implements OnInit {
   kick: number[] =  [1,0,0,0];
   hitat: number[] = [1,1,0,1];
   cur: string[] = ['-','-','-','-'];
-  speed = 357;
+  speed = 150;
   loop:boolean = false;
 
   constructor() { 
