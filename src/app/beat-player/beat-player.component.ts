@@ -14,7 +14,7 @@ export class BeatPlayerComponent implements OnInit {
   clap: number[] =  [0,0,1,0];
   kick: number[] =  [1,0,0,1];
   hitat: number[] = [1,1,1,1];
-  cur: string[] = ['-','-','-','-'];
+  // cur: string[] = ['-','-','-','-'];
   speed = 250;
   loop:boolean = false;
 
@@ -85,7 +85,7 @@ stop(){
    let c = (<HTMLMediaElement>document.getElementById('clap'));
    let k = (<HTMLMediaElement>document.getElementById('kick'));
    let h = (<HTMLMediaElement>document.getElementById('hihat'));
-   this.cur=['-','-','-','-'];
+  //  this.cur=['-','-','-','-'];
    for(let i=0;i<4;i++){
     
      await this.delay(this.speed);
@@ -93,23 +93,23 @@ stop(){
         s.currentTime=0;
         s.play();
       }
-      this.cur[i]='+';
+      // this.cur[i]='+';
       if (this.clap[i] ==1){
 
         c.currentTime=0;
         c.play();
       }
-      this.cur[i]='+';
+      // this.cur[i]='+';
       if (this.kick[i] ==1){
         k.currentTime=0;
         k.play();
       }
-      this.cur[i]='+';
+      // this.cur[i]='+';
       if (this.hitat[i] ==1){
         h.currentTime=0;
         h.play();
       } 
-      this.cur[i]='+';
+      // this.cur[i]='+';
     }
       
     if (this.loop == true){
