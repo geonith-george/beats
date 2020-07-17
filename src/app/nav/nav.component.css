@@ -1,0 +1,12 @@
+nav {
+    padding: 5px;
+    border: 2px solid black;
+    background-color: black;
+}
+
+a {
+    color: wheat;
+    font-family: 'Bebas Neue', cursive;
+    padding: 4px;
+    text-decoration: none;
+}

@@ -1,0 +1,52 @@
+    <div class="grid-container">
+        <div class="grid-item item1">Snare
+            <div class="pad1">
+                <audio class="sound" src="../sounds/bubbles.mp3"></audio>
+            </div>
+        </div>
+
+        <div class="grid-item item2">Open Hihat
+            <div class="pad2">
+                <audio class="sound" src="./sounds/clay.mp3"></audio>
+            </div> 
+        
+        </div>
+        <div class="grid-item item3">Closed Hihat
+            <div class="pad3">
+                <audio class="sound" src="./sounds/confetti.mp3"></audio>
+            </div> 
+        </div>  
+        <div class="grid-item item4">Kick
+            <div class="pad4">
+                <audio class="sound" src="./sounds/glimmer.mp3"></audio>
+            </div> 
+        </div>
+        <div class="grid-item item5">Tom
+            <div class="pad5">
+                <audio class="sound" src="./sounds/moon.mp3"></audio>
+            </div> 
+        </div>
+        <div class="grid-item item6">Clap
+                <div class="pad6">
+        <audio class="sound" src="./sounds/ufo.mp3"></audio>
+    </div> 
+        </div>
+    </div>
+
+    <script>
+    window.addEventListener("load", () => {
+    const sounds = document.querySelectorAll(".sound");
+    const pads = document.querySelectorAll(".pads div");
+    const visual = document.querySelector(".visual");
+    const colors = [
+        "#60D394", "#D36060", "#C060D3", "#D3D160", "#6860D3", "#60B2D3"
+    ]
+
+    //enabling sound
+   pads.forEach((pad, i) => {
+       pad.addEventListener("click", () => {
+           sounds[i].currentTime = 0;
+           sounds[i].play();
+       });
+   }); 
+</script>

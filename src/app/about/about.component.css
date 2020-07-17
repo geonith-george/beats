@@ -1,0 +1,18 @@
+h1 {
+    position: absolute;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    color: black;
+    font-size: 30px;
+    top: 50px;
+    left: 70px;
+}
+
+p {
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    top: 120px;
+    left: 70px;
+    color: crimson;
+}
