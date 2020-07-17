@@ -16,3 +16,13 @@ p {
     left: 70px;
     color: crimson;
 }
+
+@media only screen and (max-width: 600px) {
+
+    h1{
+        left: 50px;
+    }
+    p {
+        left: 50px;
+    }
+  }
