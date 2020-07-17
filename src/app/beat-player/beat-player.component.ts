@@ -10,12 +10,12 @@ import { trimTrailingNulls } from '@angular/compiler/src/render3/view/util';
 export class BeatPlayerComponent implements OnInit {
 
 
-  snare: number[] = [1,0,1,0];
-  clap: number[] =  [1,0,1,1];
-  kick: number[] =  [1,0,0,0];
-  hitat: number[] = [1,1,0,1];
+  snare: number[] = [0,0,1,0];
+  clap: number[] =  [0,0,1,0];
+  kick: number[] =  [1,0,0,1];
+  hitat: number[] = [1,1,1,1];
   cur: string[] = ['-','-','-','-'];
-  speed = 150;
+  speed = 250;
   loop:boolean = false;
 
   constructor() { 
@@ -85,30 +85,33 @@ stop(){
    let c = (<HTMLMediaElement>document.getElementById('clap'));
    let k = (<HTMLMediaElement>document.getElementById('kick'));
    let h = (<HTMLMediaElement>document.getElementById('hihat'));
-   
+   this.cur=['-','-','-','-'];
    for(let i=0;i<4;i++){
-    this.cur[i]='+';
+    
      await this.delay(this.speed);
       if (this.snare[i] ==1){ 
         s.currentTime=0;
         s.play();
       }
+      this.cur[i]='+';
       if (this.clap[i] ==1){
 
         c.currentTime=0;
         c.play();
       }
+      this.cur[i]='+';
       if (this.kick[i] ==1){
         k.currentTime=0;
         k.play();
       }
+      this.cur[i]='+';
       if (this.hitat[i] ==1){
         h.currentTime=0;
         h.play();
       } 
-      this.cur[i]='-';
+      this.cur[i]='+';
     }
-    
+      
     if (this.loop == true){
       this.play();
     }
