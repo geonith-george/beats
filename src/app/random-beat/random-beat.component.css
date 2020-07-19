@@ -17,3 +17,17 @@ h1 {
 .beats2 {
     top: 150px;
 }
+
+@media only screen and (max-width: 320px) {
+    h1 {
+        left: 50;
+    }
+    .beats {
+        top: 150px;
+    }
+    
+    .beats2 {
+        top: 250px;
+    }
+    
+}
