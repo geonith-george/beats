@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { PlayerComponent } from './player/player.component';
 import { LaunchpadComponent } from './launchpad/launchpad.component';
 import { BeatPlayerComponent } from './beat-player/beat-player.component';
+import { Launchpad2Component } from './launchpad2/launchpad2.component';
 
 
 const routes: Routes = [{path:'', redirectTo:'/home',pathMatch:'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [{path:'', redirectTo:'/home',pathMatch:'full'},
 {path:'about',component: AboutComponent},
 {path:'player',component: PlayerComponent},
 {path:'player/launchpad',component: LaunchpadComponent},
-{path:'player/beats',component: BeatPlayerComponent}
+{path:'player/beats',component: BeatPlayerComponent},
+{path:'player/launchpad-beats',component: Launchpad2Component}
 ];
 
 @NgModule({
